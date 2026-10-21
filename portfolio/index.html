@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/jpg" href="img/fumo.jpg">
+    <script>
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        } 
+    </script>
+    <script src="js/getURL.js">
+        var url;
+        // Check system theme and change to it
+    </script>
+    <script defer src="js/themeCheck.js">
+        // Check system theme and change to it
+    </script>
+    <script defer src="js/themeChange.js">
+        // Theme change script
+    </script>
+</head>
+
+<body class="shadow" onload="getURL(), themeCheck()">
+    <header>
+        <nav>
+            <ul id="navLinks">
+                <li><a href="." class="headerLinks">Home</a></li>
+                <li><a href="aboutme/" class="headerLinks">About Me</a></li>
+                <li><a href="contact/" class="headerLinks">Contact</a></li>
+            </ul>
+        </nav>
+        <input type="image" src="img/moon.svg" alt="Theme change button" id="theme">
+    </header>   
+    <main>
+        <div id="innerContent">
+            <ul id="projectList">
+                <li>
+                    <a href="https://github.com/38684/TowerDefense" class="projectImage">
+                        <img src="img/projects/TowerDefense.png" alt="">
+                    </a>
+                    <div>
+                        <h3>Tower Defense</h3>
+                        <p>Een tower defense game met flowfield pathfinding</p>
+                    </div>
+                    <a href="https://github.com/38684/TowerDefense" class="detailButton">
+                        <input type="button" value="Details">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/38684/Vert  al-Slice-Pokemon" class="projectImage">
+                        <img src="img/projects/VerticalSlice.png" alt="">
+                    </a>
+                    <div>
+                        <h3>Vertical Slice</h3>
+                        <p>Een vertical slice van een Toxtricity vs Shiinotic in Pokemon Sword & Shield</p>
+                    </div>
+                    <a href="https://github.com/38684/Vertical-Slice-Pokemon" class="detailButton">
+                        <input type="button" value="Details">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/MixmasterX28/YoungAndOldGamejam" class="projectImage">
+                        <img src="img/projects/YoungAndOldGameJam.png" alt="">
+                    </a>
+                    <div>
+                        <h3>Dude Wiz: The Dungeon</h3>
+                        <p>Dude Wiz: The Dungeon is een gamejam-project dat binnen drie dagen is ontwikkeld was</p>
+                    </div>
+                    <a href="https://github.com/38684/TowerDefense" class="detailButton">
+                        <input type="button" value="Details:">
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="projectImage">
+                        <img src="img/projects/GalacticRicochet.png" alt="">
+                    </a>
+                    <div>
+                        <h3>Galactic Ricochet</h3>
+                        <p>Een peggle-like game met meerdere extra game mechanics</p>
+                    </div>
+                    <a href="" class="detailButton">
+                        <input type="button" value="Details:">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Copyright 2029 - Jeffrey Chen</p>
+    </footer>
+</body>
+
+</html>

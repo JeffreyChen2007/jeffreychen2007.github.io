@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Theme colors*/
+:root {
+    --header-color: #50506E;
+    --article-color: #8888BB;
+    --div-color: #696990;
+    --text-color: #EEEEEE;
+}
+
+[theme="light"] {
+    --header-color: #888080;
+    --article-color: #B8B0B0;
+    --div-color: #C8C0C0;
+    --text-color: #000000;
+}
+
+/*Background dim when in dark mode*/
+.dim {
+    box-shadow: inset 0 0 0 1000px rgba(13, 13, 13, .5);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    background-color: var(--header-color);
+    display: grid;
+    grid-template-columns: 0fr 1fr 0fr;
+    transition: 0.2s;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+a {
+    width: 100%;
+    border: 0;
+    background: none;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: 50px;
+}
+
+#navLinks {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+#navLinks > li {
+    display: flex;
+    justify-content: center;
+    width: 20vw;
+    border-radius: 1vh;
+}
+
+#navLinks > li > a {
+    color: var(--text-color);   
+    border: 0;
+    font-size: 14pt;
+    font-weight: 600;
+    background: none;
+}
+
+#navLinks > li:hover {
+    background-color: #000000;
+}
+
+#theme {
+    width: 60px;
+    height: 60px;
+    border-style: none;
+    background-color: transparent;
+    grid-column: end;
+    position: absolute;
+    right: 1%;
+}
+
+main, article {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 80vh;
+    transition: 0.2s;
+    padding: 0px 10vw;
+    background-color: #696990;
+        background-image: linear-gradient(135deg, var(--article-color) 10%, transparent 25%), linear-gradient(225deg, var(--article-color) 25%, transparent 25%), linear-gradient(45deg, var(--article-color) 25%, transparent 25%), linear-gradient(315deg, var(--article-color) 25%, var(--div-color) 25%);
+        background-position: 4px 0, 4px 0, 0 0, 0 0;
+        background-size: 8px 8px;
+        background-repeat: repeat;
+}
+
+#innerContent {
+    background-color: var(--div-color);
+    min-height: 80vh;
+    padding: 50px 200px;
+}
+
+div {
+    gap: 30px;
+    transition: 0.2s;
+}
+
+h1, h2, h3, p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+}   
+
+#projectList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+#projectList > li {
+    display: flex;
+    width: 350px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--article-color);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#projectList > li > div {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.projectImage {
+    max-height: 197px;
+}
+
+.projectImage > img {
+    width: 350px;
+    height: 197px;
+    border: none;
+    border-radius: 1vh;
+}
+
+.detailButton {
+    display: flex;
+    width: 150px;
+    height: 35px;
+}
+
+.detailButton > input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    color: var(--text-color);
+    background-color: var(--div-color);
+    cursor: pointer;
+}
+
+#portrait {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#aboutMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills {
+    padding: 50px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skills > div {
+    display: flex;
+    gap: 25px;
+}
+
+.logo {
+    width: 100px;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--div-color);
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact > h2 {
+    text-align: center;
+    text-wrap: unset;
+}
+
+.contacts {
+    width: 50vw;
+    height: 10vw;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    background-color: var(--article-color);
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    transition: 0.2s;
+    background-color: var(--header-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+}
