@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="icon" type="image/jpg" href="../img/fumo.jpg">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/jpg" href="/img/fumo.jpg">
     <script>
         function getCookie(cname) {
             let name = cname + "=";
@@ -24,33 +24,29 @@
             return "";
         } 
     </script>
-    <script src="../js/getURL.js">
-        var url;
+    <script defer src="/js/themeCheck.js">
         // Check system theme and change to it
     </script>
-    <script defer src="../js/themeCheck.js">
-        // Check system theme and change to it
-    </script>
-    <script defer src="../js/themeChange.js">
+    <script defer src="/js/themeChange.js">
         // Theme change script
     </script>
 </head>
 
-<body class="shadow" onload="getURL(), themeCheck()">
+<body class="shadow" onload="themeCheck()">
     <header>
         <nav>
             <ul id="navLinks">
-                <li><a href="../" class="headerLinks">Home</a></li>
-                <li><a href="../aboutme/" class="headerLinks">About Me</a></li>
-                <li><a href="../contact/" class="headerLinks">Contact</a></li>
+                <li><a href="/" class="headerLinks">Home</a></li>
+                <li><a href="/aboutme/" class="headerLinks">About Me</a></li>
+                <li><a href="/contact/" class="headerLinks">Contact</a></li>
             </ul>
         </nav>
-        <input type="image" src="../img/moon.svg" alt="Theme change button" id="theme">
+        <input type="image" src="/img/moon.svg" alt="Theme change button" id="theme">
     </header>
     <article>
         <div id="innerContent">
             <div id="aboutMe">
-                <img src="../img/fumo.jpg"
+                <img src="/img/fumo.jpg"
                     alt="Portrait" id="portrait">
                 <div>
                     <h2>About me</h2>
@@ -64,12 +60,12 @@
             <div id="skills">
                 <h1>Skills</h1>
                 <div>
-                    <img src="../img/logos/CSharp_Logo.svg" alt="" class="logo">
-                    <img src="../img/logos/CPlusPlus_Logo.svg" alt="" class="logo">
-                    <img src="../img/logos/Unity_Logo.svg" alt="" class="logo">
-                    <img src="../img/logos/HTML5_Logo.svg" alt="" class="logo">
-                    <img src="../img/logos/CSS_Logo.svg" alt="" class="logo">
-                    <img src="../img/logos/JavaScript_Logo.svg" alt="" class="logo">
+                    <img src="/img/logos/CSharp_Logo.svg" alt="" class="logo">
+                    <img src="/img/logos/CPlusPlus_Logo.svg" alt="" class="logo">
+                    <img src="/img/logos/Unity_Logo.svg" alt="" class="logo">
+                    <img src="/img/logos/HTML5_Logo.svg" alt="" class="logo">
+                    <img src="/img/logos/CSS_Logo.svg" alt="" class="logo">
+                    <img src="/img/logos/JavaScript_Logo.svg" alt="" class="logo">
                 </div>
             </div>
         </div>

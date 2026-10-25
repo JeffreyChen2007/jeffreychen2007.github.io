@@ -3,7 +3,7 @@ themeButton.onclick = function themeChange() {
         console.log("a");
         document.cookie = "theme=dark";
         document.body.removeAttribute("theme");
-        themeButton.src = url + "/img/moon.svg";
+        themeButton.src = "/img/moon.svg";
         document.body.classList.toggle("shadow");
     }
     else {
@@ -11,6 +11,6 @@ themeButton.onclick = function themeChange() {
         document.cookie = "theme=light";
         document.body.setAttribute("theme", "light");
         document.body.classList.toggle("shadow");
-        themeButton.src = url + "/img/sun.svg";
+        themeButton.src = "/img/sun.svg";
     }
 };

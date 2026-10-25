@@ -34,7 +34,6 @@ header {
     background-color: var(--header-color);
     display: grid;
     grid-template-columns: 0fr 1fr 0fr;
-    transition: 0.2s;
     align-items: center;
     padding: 0px 20px;
 }
@@ -100,7 +99,6 @@ main, article {
     box-sizing: border-box;
     width: 100%;
     min-height: 80vh;
-    transition: 0.2s;
     padding: 0px 10vw;
     background-color: #696990;
         background-image: linear-gradient(135deg, var(--article-color) 10%, transparent 25%), linear-gradient(225deg, var(--article-color) 25%, transparent 25%), linear-gradient(45deg, var(--article-color) 25%, transparent 25%), linear-gradient(315deg, var(--article-color) 25%, var(--div-color) 25%);
@@ -117,7 +115,6 @@ main, article {
 
 div {
     gap: 30px;
-    transition: 0.2s;
 }
 
 h1, h2, h3, p {
@@ -218,26 +215,42 @@ li {
     align-items: center;
 }
 
-#contact > h2 {
-    text-align: center;
-    text-wrap: unset;
-}
-
 .contacts {
-    width: 50vw;
-    height: 10vw;
-    padding: 50px;
+    width: 300px;
+    height: 150px;
+    padding-left: 30px;
+    padding-right: 150px;
     display: flex;
     align-items: center;
     border-radius: 50px;
     background-color: var(--article-color);
 }
 
+.contacts > a {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-wrap: nowrap;
+}
+
+.contactLogos {
+    width: 75px;
+}
+
+#textToCopy {
+    min-width: 175px;
+    padding: 3px 10px;
+    color: var(--text-color);
+    background-color: var(--div-color);
+}
+
+#copyTextButton {
+
+}
+
 footer {
     width: 100%;
     height: 100px;
     box-sizing: border-box;
-    transition: 0.2s;
     background-color: var(--header-color);
     display: flex;
     justify-content: center;

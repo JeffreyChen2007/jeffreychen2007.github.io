@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="icon" type="image/jpg" href="../img/fumo.jpg">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/jpg" href="/img/fumo.jpg">
     <script>
         function getCookie(cname) {
             let name = cname + "=";
@@ -24,43 +24,42 @@
             return "";
         } 
     </script>
-    <script src="../js/getURL.js">
-        var url;
+    <script defer src="/js/themeCheck.js">
         // Check system theme and change to it
     </script>
-    <script defer src="../js/themeCheck.js">
-        // Check system theme and change to it
-    </script>
-    <script defer src="../js/themeChange.js">
+    <script defer src="/js/themeChange.js">
         // Theme change script
+    </script>
+    <script defer src="/js/copyToClipboard.js">
     </script>
 </head>
 
-<body class="shadow" onload="getURL(), themeCheck()">
+<body class="shadow" onload="themeCheck()">
     <header>
         <nav>
             <ul id="navLinks">
-                <li><a href="../" class="headerLinks">Home</a></li>
-                <li><a href="../aboutme/" class="headerLinks">About Me</a></li>
-                <li><a href="../contact/" class="headerLinks">Contact</a></li>
+                <li><a href="/" class="headerLinks">Home</a></li>
+                <li><a href="/aboutme/" class="headerLinks">About Me</a></li>
+                <li><a href="/contact/" class="headerLinks">Contact</a></li>
             </ul>
         </nav>
-        <input type="image" src="../img/moon.svg" alt="Theme change button" id="theme">
+        <input type="image" src="/img/moon.svg" alt="Theme change button" id="theme">
     </header>
     <article>
         <div id="innerContent">
             <div id="contact">
                 <div class="contacts">
-                    <h2>My github:</h2>
-                    <a href="https://github.com/38684">
-                        <img src="../img/logos/GitHub_Invertocat_White.svg" alt="" class="logo">
+                    <a href="https://github.com/JeffreyChen2007" target="_blank" rel="noopener noreferrer">
+                        <img src="/img/logos/GitHub_Invertocat_White.svg" alt="" class="contactLogos">
                     </a>
+                    <a href="https://github.com/JeffreyChen2007" target="_blank" rel="noopener noreferrer">https://github.com/JeffreyChen2007</a>
                 </div>
                 <div class="contacts">
-                    <h2>My email:</h2>
                     <a href="mailto:chenjeffrey2007@gmail.com">
-                        <img src="../img/logos/Email_Icon.svg" alt="" class="logo">
+                        <img src="/img/logos/Email_Icon.svg" alt="" class="contactLogos">
                     </a>
+                    <input id="textToCopy" value="chenjeffrey2007@gmail.com" readonly></input>
+                    <input type="image" src="/img/fumo.jpg" id="copyTextButton" class="contactLogos">
                 </div>
             </div>
         </div>
