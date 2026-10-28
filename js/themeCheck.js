@@ -2,16 +2,29 @@ const systemlightTheme = (window.matchMedia && window.matchMedia('(prefers-color
 const themeButton = document.getElementById("theme");
 
 function themeCheck() {
-    if (getCookie("theme") != "") return;
+    if (localStorage.theme != null) return;
 
     if (systemlightTheme) {
-        document.cookie = "theme=light;";
-        themeButton.src = "/img/sun.svg";
+        localStorage.theme = "light"
+        themeButton.src = "/img/icon/sun.svg";
         document.body.setAttribute("theme", "light");
         document.body.classList.toggle("shadow");
     } 
     else {
-        document.cookie = "theme=dark;";
-        themeButton.src = "/img/moon.svg";
+        localStorage.theme = "dark"
+        themeButton.src = "/img/icon/moon.svg";
     }
 };
+
+function themeRecheck() {
+    if (localStorage.theme == "light") {
+        localStorage.theme = "light"
+        themeButton.src = "/img/icon/sun.svg";
+        document.body.setAttribute("theme", "light");
+        document.body.classList.toggle("shadow");
+    }
+    else {
+        localStorage.theme = "dark"
+        themeButton.src = "/img/icon/moon.svg";
+    }
+}

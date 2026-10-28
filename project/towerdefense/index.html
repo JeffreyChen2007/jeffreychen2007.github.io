@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/jpg" href="/img/fumo.jpg">
+    <script defer src="/js/themeCheck.js">
+        // Check system theme and change to it
+    </script>
+    <script defer src="/js/themeChange.js">
+        // Theme change script
+    </script>
+</head>
+
+<body class="shadow" onload="themeCheck(), themeRecheck(), setCodeTheme()">
+    <header>
+        <nav>
+            <ul id="navLinks">
+                <li><a href="/" class="headerLinks">Home</a></li>
+                <li><a href="/aboutme/" class="headerLinks">About Me</a></li>
+                <li><a href="/contact/" class="headerLinks">Contact</a></li>
+            </ul>
+        </nav>
+        <input type="image" src="/img/icon/moon.svg" alt="Theme change button" id="theme">
+    </header>
+    <article>
+        <div id="innerContent">
+            <img src="/img/projects/TowerDefense.png" alt="" class="projectImage"> 
+           
+        </div>
+    </article>
+    <footer>
+        <p>&copy; Copyright 2029 - Jeffrey Chen</p>
+    </footer>
+</body>
+
+</html>

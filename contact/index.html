@@ -30,11 +30,10 @@
     <script defer src="/js/themeChange.js">
         // Theme change script
     </script>
-    <script defer src="/js/copyToClipboard.js">
-    </script>
+    <script defer src="/js/copyToClipboard.js"></script>
 </head>
 
-<body class="shadow" onload="themeCheck()">
+<body class="shadow" onload="themeCheck(), themeRecheck()">
     <header>
         <nav>
             <ul id="navLinks">
@@ -43,14 +42,14 @@
                 <li><a href="/contact/" class="headerLinks">Contact</a></li>
             </ul>
         </nav>
-        <input type="image" src="/img/moon.svg" alt="Theme change button" id="theme">
+        <input type="image" src="/img/icon/moon.svg" alt="Theme change button" id="theme">
     </header>
     <article>
         <div id="innerContent">
             <div id="contact">
                 <div class="contacts">
                     <a href="https://github.com/JeffreyChen2007" target="_blank" rel="noopener noreferrer">
-                        <img src="/img/logos/GitHub_Invertocat_White.svg" alt="" class="contactLogos">
+                        <img src="/img/logos/GitHub_Invertocat_White.svg" alt="" class="contactLogos invert2">
                     </a>
                     <a href="https://github.com/JeffreyChen2007" target="_blank" rel="noopener noreferrer">https://github.com/JeffreyChen2007</a>
                 </div>
@@ -59,7 +58,7 @@
                         <img src="/img/logos/Email_Icon.svg" alt="" class="contactLogos">
                     </a>
                     <input id="textToCopy" value="chenjeffrey2007@gmail.com" readonly></input>
-                    <input type="image" src="/img/fumo.jpg" id="copyTextButton" class="contactLogos">
+                    <input type="image" src="/img/icon/copy.svg" id="copyTextButton" class="contactLogos invert1">
                 </div>
             </div>
         </div>

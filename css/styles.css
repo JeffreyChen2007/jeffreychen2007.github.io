@@ -9,6 +9,8 @@
     --article-color: #8888BB;
     --div-color: #696990;
     --text-color: #EEEEEE;
+    --invert1: 1;
+    --invert2: 0;
 }
 
 [theme="light"] {
@@ -16,11 +18,16 @@
     --article-color: #B8B0B0;
     --div-color: #C8C0C0;
     --text-color: #000000;
+    --invert1: 0;
+    --invert2: 1;
 }
 
-/*Background dim when in dark mode*/
-.dim {
-    box-shadow: inset 0 0 0 1000px rgba(13, 13, 13, .5);
+.invert1 {
+    filter: invert(var(--invert1));
+}
+
+.invert2 {
+    filter: invert(var(--invert2));
 }
 
 html {
@@ -30,12 +37,10 @@ html {
 header {
     width: 100%;
     height: 100px;
-    box-sizing: border-box;
     background-color: var(--header-color);
-    display: grid;
-    grid-template-columns: 0fr 1fr 0fr;
+    display: flex;
     align-items: center;
-    padding: 0px 20px;
+    justify-content: center;
 }
 
 a {
@@ -48,22 +53,10 @@ a {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-nav {
-    grid-column: 2;
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-    height: 50px;
-}
-
 #navLinks {
     list-style: none;
     display: flex;
-    justify-content: center;
-    overflow: auto;
     gap: 25px;
-    flex-wrap: wrap;
-    padding: 0;
 }
 
 #navLinks > li {
@@ -71,6 +64,7 @@ nav {
     justify-content: center;
     width: 20vw;
     border-radius: 1vh;
+    background-color: var(--div-color);
 }
 
 #navLinks > li > a {
@@ -82,7 +76,7 @@ nav {
 }
 
 #navLinks > li:hover {
-    background-color: #000000;
+    filter: brightness(85%);
 }
 
 #theme {
@@ -90,9 +84,8 @@ nav {
     height: 60px;
     border-style: none;
     background-color: transparent;
-    grid-column: end;
     position: absolute;
-    right: 1%;
+    right: 1.5%;
 }
 
 main, article {
@@ -108,9 +101,12 @@ main, article {
 }
 
 #innerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--div-color);
     min-height: 80vh;
-    padding: 50px 200px;
+    padding: 50px 100px;
 }
 
 div {
@@ -120,7 +116,11 @@ div {
 h1, h2, h3, p {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text-color);
-}   
+}
+
+.projectLogo {
+    width: 25px;
+}
 
 #projectList {
     display: flex;
@@ -147,11 +147,11 @@ h1, h2, h3, p {
     gap: 10px;
 }
 
-.projectImage {
+.thumbnail {
     max-height: 197px;
 }
 
-.projectImage > img {
+.thumbnail > img {
     width: 350px;
     height: 197px;
     border: none;
@@ -205,7 +205,6 @@ h1, h2, h3, p {
 li {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text-color);
-    background-color: var(--div-color);
 }
 
 #contact {
@@ -243,8 +242,12 @@ li {
     background-color: var(--div-color);
 }
 
-#copyTextButton {
+.projectImage {
+    width: 60%;
+}
 
+code {
+    color: var(--text-color);
 }
 
 footer {
@@ -256,4 +259,33 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 0px 20px;
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 330px;
+        padding: 0;
+        align-items: unset;
+    }
+
+    nav {
+        padding-top: 25px;
+    }
+
+    #navLinks {
+        flex-direction: column;
+    }
+    
+    #navLinks > li {
+        width: 80vw;
+    }
+
+    #theme {
+        bottom: 610px;
+        right: unset;
+    }
+
+    main, article {
+        padding: 0;
+    }
 }
